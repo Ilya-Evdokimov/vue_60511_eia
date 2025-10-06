@@ -14,13 +14,12 @@ export const useAuthStore = defineStore('authStore', {
       this.errorMessage = null;
       try {
         const response = await axios.post('http://127.0.0.1:8000/api/login', credentials);
-        
+
         this.token = response.data.token;
         this.user = response.data.user;
         this.isAuthenticated = true;
         this.errorMessage = null;
-        
-        // Сохраняем токен в localStorage
+
         localStorage.setItem('token', this.token);
       } catch (error) {
         if (error.response) {
@@ -60,7 +59,6 @@ export const useAuthStore = defineStore('authStore', {
       this.user = null;
       this.isAuthenticated = false;
       this.errorMessage = null;
-      // Удаляем токен из localStorage
       localStorage.removeItem('token');
     }
   }

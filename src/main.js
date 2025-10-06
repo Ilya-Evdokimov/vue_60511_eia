@@ -1,11 +1,6 @@
-
-
 import { createApp } from 'vue'
-// Попробуйте добавить расширения файлов
-import App from './App.vue'  // Убедитесь что файл существует
+import App from './App.vue'
 import { createPinia } from 'pinia'
-
-// Добавьте обработку ошибок
 try {
   const app = createApp(App)
   const pinia = createPinia()

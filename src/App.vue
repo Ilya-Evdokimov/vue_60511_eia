@@ -3,29 +3,29 @@
     <header>
       <nav>
         <div v-if="isAuthenticated && user">
-          Welcome, {{ user.name }}  
-          <button @click="logout">Logout</button>  
+          Welcome, {{ user.name }}
+          <button @click="logout">Logout</button>
         </div>
 
         <div v-else>
           <form @submit.prevent="login">
             <div>
-              <label for="email">Email:</label>  
+              <label for="email">Email:</label>
               <input v-model="email" type="email" id="email" required />
-            </div>  
+            </div>
             <div>
-              <label for="password">Password:</label>  
+              <label for="password">Password:</label>
               <input v-model="password" type="password" id="password" required />
-            </div>  
-            <button type="submit">Login</button>  
-            <p v-if="authError" class="error">{{ authError }}</p>  
-          </form>  
+            </div>
+            <button type="submit">Login</button>
+            <p v-if="authError" class="error">{{ authError }}</p>
+          </form>
         </div>
       </nav>
     </header>
 
     <main>
-      <!-- Здесь будет основной контент вашего приложения -->
+
       <router-view></router-view>
     </main>
   </div>
@@ -65,8 +65,7 @@ export default {
         email: this.email,
         password: this.password
       });
-      
-      // Очищаем поля формы после попытки входа
+
       if (this.isAuthenticated) {
         this.email = '';
         this.password = '';
