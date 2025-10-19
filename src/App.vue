@@ -5,6 +5,10 @@
         <div v-if="isAuthenticated && user">
           Welcome, {{ user.name }}
           <button @click="logout">Logout</button>
+
+          <router-link to="/" class="nav-link">Главная</router-link>
+          <router-link to="/users" class="nav-link">Пользователи</router-link>
+          <router-link to="/posts" class="nav-link">Товары</router-link>
         </div>
 
         <div v-else>
