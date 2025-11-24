@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import MainPage from '../components/MainPage.vue'
-import UserList from '../components/UserList.vue'
+import CommentsList from '../components/CommentsList.vue'
 import postCatalog from '../components/postCatalog.vue'
 
 const routes = [
@@ -10,9 +10,9 @@ const routes = [
     component: MainPage
   },
   {
-    path: '/users',
-    name: 'UserList',
-    component: UserList
+    path: '/comments',
+    name: 'Comments',
+    component: CommentsList
   },
   {
     path: '/posts',

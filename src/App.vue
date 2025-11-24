@@ -88,9 +88,9 @@ export default {
           route: '/posts'
         },
         {
-          label: 'Пользователи',
+          label: 'Комментарии',
           icon: 'pi pi-fw pi-box',
-          route: '/users'
+          route: '/comments'
         }
       ]
     };

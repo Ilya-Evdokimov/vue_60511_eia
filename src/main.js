@@ -24,3 +24,4 @@ try {
 } catch (error) {
   console.error('Error mounting app:', error)
 }
+
